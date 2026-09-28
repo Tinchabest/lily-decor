@@ -8,3 +8,8 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+## Project architecture
+
+- Keep shared navigation and footer in `src/components/site-layout.tsx` so every public page stays visually consistent.
+- Keep Lily Decor business pages as separate TanStack routes for shareable URLs and route-specific metadata.
