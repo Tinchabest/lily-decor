@@ -1,0 +1,10 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { Instagram } from "lucide-react";
+import { PageIntro } from "@/components/site-layout";
+import { Button } from "@/components/ui/button";
+import heroImage from "@/assets/lily-hero.jpg";
+import floralImage from "@/assets/lily-floral.jpg";
+import tableImage from "@/assets/lily-table.jpg";
+
+export const Route = createFileRoute("/galerija")({ head: () => ({ meta: [{ title: "Galerija vjenčanja — Lily Decor" },{ name: "description", content: "Pogledajte cvjetne dekoracije, svečane stolove i vjenčanja u izvedbi Lily Decor." },{ property: "og:title", content: "Galerija — Lily Decor" },{ property: "og:description", content: "Inspiracija iz cvijeća, svijeća i profinjenih detalja." },{ property: "og:type", content: "website" },{ name: "twitter:card", content: "summary_large_image" }]}), component: Gallery });
+function Gallery(){return <><PageIntro eyebrow="Naši radovi" title="Galerija slavlja" text="Pogledajte dio atmosfere koju stvaramo — od intimnih cvjetnih detalja do cjelovitog uređenja svečanih prostora."/><section className="px-5 py-20 lg:px-8"><div className="mx-auto grid max-w-7xl gap-5 md:grid-cols-2"><img src={heroImage} loading="lazy" width={1600} height={1008} alt="Raskošno uređena svadbena sala" className="aspect-[4/3] w-full object-cover md:col-span-2"/><img src={floralImage} loading="lazy" width={1200} height={1200} alt="Cvjetni aranžman u ružičastim tonovima" className="aspect-square w-full object-cover"/><img src={tableImage} loading="lazy" width={1408} height={1008} alt="Svečani stol s cvijećem i svijećama" className="aspect-square w-full object-cover"/></div><div className="mx-auto mt-14 max-w-2xl text-center"><h2 className="text-4xl text-brand-green">Još trenutaka na Instagramu</h2><p className="mt-3 leading-7 text-muted-foreground">Pratite naše najnovije dekoracije i pogledajte kako izgleda svaki detalj stvarnih slavlja.</p><Button asChild variant="accent" className="mt-6"><a href="https://www.instagram.com/vjencanja_lily/" target="_blank" rel="noreferrer"><Instagram size={18}/>Otvori Instagram</a></Button></div></section></>}
