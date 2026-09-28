@@ -167,8 +167,22 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes image-reveal {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}
+
 @utility animate-soft-rise {
   animation: soft-rise 700ms ease-out both;
+}
+
+@utility animate-soft-rise-delay {
+  animation: soft-rise 700ms 180ms ease-out both;
+}
+
+@utility image-reveal {
+  animation: image-reveal 900ms ease-out both;
+  overflow: hidden;
 }
 
 @media (prefers-reduced-motion: reduce) {
