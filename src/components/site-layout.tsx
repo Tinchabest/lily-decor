@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 
 const nav = [
   ["/", "Naslovna"],
-  ["/usluge", "Usluge"],
   ["/galerija", "Galerija"],
   ["/o-nama", "O nama"],
   ["/kontakt", "Kontakt"],
@@ -28,12 +27,9 @@ export function SiteLayout({ children }: { children: ReactNode }) {
               </Link>
             ))}
           </nav>
-          <div className="hidden md:block">
-            <Button asChild variant="accent"><Link to="/kontakt">Pošaljite upit</Link></Button>
-          </div>
-          <button className="grid size-11 place-items-center text-foreground md:hidden" onClick={() => setOpen((value) => !value)} aria-label={open ? "Zatvori izbornik" : "Otvori izbornik"}>
+          <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setOpen((value) => !value)} aria-label={open ? "Zatvori izbornik" : "Otvori izbornik"}>
             {open ? <X /> : <Menu />}
-          </button>
+          </Button>
         </div>
         {open && (
           <nav className="border-t border-border bg-background px-5 py-5 md:hidden" aria-label="Mobilna navigacija">
@@ -46,9 +42,9 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       <main>{children}</main>
       <footer className="bg-brand-green text-primary-foreground">
         <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 md:grid-cols-[1.1fr_1fr_1fr] lg:px-8">
-          <div><p className="font-display text-4xl">Lily Decor</p><p className="mt-3 max-w-sm text-sm leading-7 opacity-80">Cvjetne dekoracije i profinjeni detalji za vjenčanja koja ostaju u sjećanju.</p></div>
+          <div className="animate-soft-rise"><p className="font-display text-4xl">Lily Decor</p><p className="mt-3 max-w-sm text-sm leading-7 opacity-80">Cvjetne dekoracije i profinjeni detalji za vjenčanja koja ostaju u sjećanju.</p></div>
           <div className="space-y-3 text-sm"><p className="mb-4 font-semibold uppercase tracking-widest opacity-70">Kontakt</p><a className="flex gap-3 hover:opacity-75" href="tel:+385915733666"><Phone size={17}/>+385 91 573 3666</a><a className="flex gap-3 hover:opacity-75" href="mailto:vjencanjalily@gmail.com"><Mail size={17}/>vjencanjalily@gmail.com</a><p className="flex gap-3"><MapPin size={17} className="shrink-0"/>Bulićeva 2, Donji Čehi, 10020 Zagreb</p></div>
-          <div><p className="mb-4 text-sm font-semibold uppercase tracking-widest opacity-70">Pratite nas</p><div className="flex gap-3"><a className="grid size-11 place-items-center border border-primary-foreground/30 transition-colors hover:bg-primary-foreground/10" href="https://www.instagram.com/vjencanja_lily/" target="_blank" rel="noreferrer" aria-label="Lily Decor na Instagramu"><Instagram size={20}/></a><a className="grid size-11 place-items-center border border-primary-foreground/30 transition-colors hover:bg-primary-foreground/10" href="https://www.facebook.com/vjencanjalily" target="_blank" rel="noreferrer" aria-label="Lily Decor na Facebooku"><Facebook size={20}/></a></div></div>
+          <div><p className="mb-4 text-sm font-semibold uppercase tracking-widest opacity-70">Pratite nas</p><div className="flex flex-wrap gap-3"><a className="inline-flex min-h-11 items-center gap-2 border border-primary-foreground/30 px-4 text-sm font-semibold transition-all hover:-translate-y-0.5 hover:bg-primary-foreground/10" href="https://www.instagram.com/vjencanja_lily/" target="_blank" rel="noopener noreferrer" aria-label="Otvori Lily Decor na Instagramu"><Instagram size={19}/>Instagram</a><a className="inline-flex min-h-11 items-center gap-2 border border-primary-foreground/30 px-4 text-sm font-semibold transition-all hover:-translate-y-0.5 hover:bg-primary-foreground/10" href="https://www.facebook.com/vjencanjalily/" target="_blank" rel="noopener noreferrer" aria-label="Otvori Lily Decor na Facebooku"><Facebook size={19}/>Facebook</a></div></div>
         </div>
         <div className="border-t border-primary-foreground/15 px-5 py-5 text-center text-xs opacity-65">© 2026 Lily Decor. Sva prava pridržana.</div>
       </footer>
@@ -57,5 +53,5 @@ export function SiteLayout({ children }: { children: ReactNode }) {
 }
 
 export function PageIntro({ eyebrow, title, text }: { eyebrow: string; title: string; text: string }) {
-  return <section className="bg-brand-pink-soft"><div className="mx-auto max-w-5xl px-5 py-20 text-center lg:px-8"><p className="text-xs font-bold uppercase tracking-widest text-brand-pink">{eyebrow}</p><h1 className="mt-4 text-5xl leading-none text-brand-green sm:text-6xl">{title}</h1><p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-muted-foreground">{text}</p></div></section>;
+  return <section className="bg-brand-pink-soft"><div className="mx-auto max-w-5xl animate-soft-rise px-5 py-20 text-center lg:px-8"><p className="text-xs font-bold uppercase tracking-widest text-brand-pink">{eyebrow}</p><h1 className="mt-4 text-5xl leading-none text-brand-green sm:text-6xl">{title}</h1><p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-muted-foreground">{text}</p></div></section>;
 }

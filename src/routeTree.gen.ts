@@ -13,7 +13,6 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as GalerijaRouteImport } from './routes/galerija'
 import { Route as KontaktRouteImport } from './routes/kontakt'
 import { Route as ONamaRouteImport } from './routes/o-nama'
-import { Route as UslugeRouteImport } from './routes/usluge'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -35,25 +34,18 @@ const ONamaRoute = ONamaRouteImport.update({
   path: '/o-nama',
   getParentRoute: () => rootRouteImport,
 } as any)
-const UslugeRoute = UslugeRouteImport.update({
-  id: '/usluge',
-  path: '/usluge',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/galerija': typeof GalerijaRoute
   '/kontakt': typeof KontaktRoute
   '/o-nama': typeof ONamaRoute
-  '/usluge': typeof UslugeRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/galerija': typeof GalerijaRoute
   '/kontakt': typeof KontaktRoute
   '/o-nama': typeof ONamaRoute
-  '/usluge': typeof UslugeRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -61,14 +53,13 @@ export interface FileRoutesById {
   '/galerija': typeof GalerijaRoute
   '/kontakt': typeof KontaktRoute
   '/o-nama': typeof ONamaRoute
-  '/usluge': typeof UslugeRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/galerija' | '/kontakt' | '/o-nama' | '/usluge'
+  fullPaths: '/' | '/galerija' | '/kontakt' | '/o-nama'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/galerija' | '/kontakt' | '/o-nama' | '/usluge'
-  id: '__root__' | '/' | '/galerija' | '/kontakt' | '/o-nama' | '/usluge'
+  to: '/' | '/galerija' | '/kontakt' | '/o-nama'
+  id: '__root__' | '/' | '/galerija' | '/kontakt' | '/o-nama'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -76,7 +67,6 @@ export interface RootRouteChildren {
   GalerijaRoute: typeof GalerijaRoute
   KontaktRoute: typeof KontaktRoute
   ONamaRoute: typeof ONamaRoute
-  UslugeRoute: typeof UslugeRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -109,13 +99,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ONamaRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/usluge': {
-      id: '/usluge'
-      path: '/usluge'
-      fullPath: '/usluge'
-      preLoaderRoute: typeof UslugeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
@@ -124,7 +107,6 @@ const rootRouteChildren: RootRouteChildren = {
   GalerijaRoute: GalerijaRoute,
   KontaktRoute: KontaktRoute,
   ONamaRoute: ONamaRoute,
-  UslugeRoute: UslugeRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
