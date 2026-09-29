@@ -1,14 +1,21 @@
-# Welcome to your Lovable project
+# Lily Decor Creations
+
+📩 vjencanjalily@gmail.com
+📞 +385 91 573 3666
+bulićeva 2, Donji Cehi, Zagrebačka, Croatia 10020
+Ime kompanije Lily Decor
 
 This project was built with [Lovable](https://lovable.dev).
 
+**Live app**: https://lily-decor.lovable.app
+
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/06cd848a-0a26-47ec-90e3-e49352dcd1e7).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +27,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
