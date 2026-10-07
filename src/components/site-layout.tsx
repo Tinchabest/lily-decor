@@ -17,8 +17,9 @@ export function SiteLayout({ children }: { children: ReactNode }) {
     <div className="min-h-screen overflow-x-hidden bg-background">
       <header className="sticky top-0 z-50 border-b border-border/70 bg-background/95 backdrop-blur">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 lg:px-8">
-          <Link to="/" className="block" aria-label="Lily Decor — naslovna">
+<Link to="/" className="flex items-center gap-3" aria-label="Lily Decor — naslovna">
             <img src={logoImage} width={150} height={150} alt="Lily Decor" className="h-16 w-16 object-cover sm:h-18 sm:w-18" />
+            <span className="text-2xl leading-none font-semibold tracking-wide"><span className="text-brand-green">Lily</span> <span className="text-brand-pink">Decor</span></span>
           </Link>
           <nav className="hidden items-center gap-7 md:flex" aria-label="Glavna navigacija">
             {nav.map(([to, label]) => (
