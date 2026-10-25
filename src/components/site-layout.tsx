@@ -6,6 +6,7 @@ import logoImage from "@/assets/lily-decor-logo.jpg";
 
 const nav = [
   ["/", "Naslovna"],
+  ["/usluge", "Usluge"],
   ["/galerija", "Galerija"],
   ["/o-nama", "O nama"],
   ["/kontakt", "Kontakt"],
