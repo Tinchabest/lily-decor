@@ -2,18 +2,18 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Instagram } from "lucide-react";
 import { PageIntro } from "@/components/site-layout";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/lily-sala-clean.jpg.asset.json";
-import floralImage from "@/assets/lily-cvijece-clean.jpg.asset.json";
-import tableImage from "@/assets/lily-stol-clean.jpg.asset.json";
-import crkvaImage from "@/assets/lily-crkva.jpg.asset.json";
-import salaPlavaImage from "@/assets/lily-sala-plava.jpg.asset.json";
-import cvijecePlavoImage from "@/assets/lily-cvijece-plavo.jpg.asset.json";
-import salaTamnaImage from "@/assets/lily-sala-tamna.jpg.asset.json";
-import stolTamniImage from "@/assets/lily-stol-tamni.jpg.asset.json";
-import stolCrniImage from "@/assets/lily-stol-crni.jpg.asset.json";
-import stolKremImage from "@/assets/lily-stol-krem.jpg.asset.json";
-import buketMladaImage from "@/assets/lily-buket-mlada.jpg.asset.json";
-import baloniKrstenjeImage from "@/assets/lily-baloni-krstenje.jpg.asset.json";
+import heroImage from "@/assets/lily-sala-clean.jpg";
+import floralImage from "@/assets/lily-cvijece-clean.jpg";
+import tableImage from "@/assets/lily-stol-clean.jpg";
+import crkvaImage from "@/assets/lily-crkva.jpg";
+import salaPlavaImage from "@/assets/lily-sala-plava.jpg";
+import cvijecePlavoImage from "@/assets/lily-cvijece-plavo.jpg";
+import salaTamnaImage from "@/assets/lily-sala-tamna.jpg";
+import stolTamniImage from "@/assets/lily-stol-tamni.jpg";
+import stolCrniImage from "@/assets/lily-stol-crni.jpg";
+import stolKremImage from "@/assets/lily-stol-krem.jpg";
+import buketMladaImage from "@/assets/lily-buket-mlada.jpg";
+import baloniKrstenjeImage from "@/assets/lily-baloni-krstenje.jpg";
 
 export const Route = createFileRoute("/galerija")({ head: () => ({ meta: [{ title: "Galerija vjenčanja — Lily Decor" },{ name: "description", content: "Pogledajte cvjetne dekoracije, svečane stolove i vjenčanja u izvedbi Lily Decor." },{ property: "og:title", content: "Galerija — Lily Decor" },{ property: "og:description", content: "Inspiracija iz cvijeća, svijeća i profinjenih detalja." },{ property: "og:type", content: "website" },{ name: "twitter:card", content: "summary_large_image" }]}), component: Gallery });
 
@@ -31,7 +31,7 @@ function Gallery() {
       <section className="px-5 py-20 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-5 md:grid-cols-2">
           <img
-            src={heroImage.url}
+            src={heroImage}
             loading="lazy"
             width={891}
             height={942}
@@ -40,7 +40,7 @@ function Gallery() {
           />
           {/* Plavo-bijeli tonovi */}
           <img
-            src={salaPlavaImage.url}
+            src={salaPlavaImage}
             loading="lazy"
             width={897}
             height={940}
@@ -48,7 +48,7 @@ function Gallery() {
             className={galleryImageClass}
           />
           <img
-            src={cvijecePlavoImage.url}
+            src={cvijecePlavoImage}
             loading="lazy"
             width={897}
             height={940}
@@ -57,7 +57,7 @@ function Gallery() {
           />
           {/* Tamni, svečani ambijent */}
           <img
-            src={salaTamnaImage.url}
+            src={salaTamnaImage}
             loading="lazy"
             width={897}
             height={940}
@@ -65,7 +65,7 @@ function Gallery() {
             className={galleryImageClass}
           />
           <img
-            src={stolTamniImage.url}
+            src={stolTamniImage}
             loading="lazy"
             width={897}
             height={940}
@@ -74,7 +74,7 @@ function Gallery() {
           />
           {/* Okrugli stolovi */}
           <img
-            src={stolCrniImage.url}
+            src={stolCrniImage}
             loading="lazy"
             width={897}
             height={940}
@@ -82,7 +82,7 @@ function Gallery() {
             className={galleryImageClass}
           />
           <img
-            src={stolKremImage.url}
+            src={stolKremImage}
             loading="lazy"
             width={897}
             height={940}
@@ -91,7 +91,7 @@ function Gallery() {
           />
           {/* Cvijeće i buketi */}
           <img
-            src={buketMladaImage.url}
+            src={buketMladaImage}
             loading="lazy"
             width={897}
             height={940}
@@ -99,7 +99,7 @@ function Gallery() {
             className={galleryImageClass}
           />
           <img
-            src={floralImage.url}
+            src={floralImage}
             loading="lazy"
             width={891}
             height={942}
@@ -108,7 +108,7 @@ function Gallery() {
           />
           {/* Stol i crkva */}
           <img
-            src={tableImage.url}
+            src={tableImage}
             loading="lazy"
             width={688}
             height={940}
@@ -116,7 +116,7 @@ function Gallery() {
             className={galleryImageClass}
           />
           <img
-            src={crkvaImage.url}
+            src={crkvaImage}
             loading="lazy"
             width={939}
             height={946}
@@ -125,7 +125,7 @@ function Gallery() {
           />
           {/* Baloni */}
           <img
-            src={baloniKrstenjeImage.url}
+            src={baloniKrstenjeImage}
             loading="lazy"
             width={897}
             height={940}
