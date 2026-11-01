@@ -1,3 +1,9 @@
 [build]
   command = "bun run build"
   publish = "dist"
+
+# Lovable-hosted assets (*.asset.json urls) — proxy so they also load on Netlify
+[[redirects]]
+  from = "/__l5e/*"
+  to = "https://lily-decor.lovable.app/__l5e/:splat"
+  status = 200
